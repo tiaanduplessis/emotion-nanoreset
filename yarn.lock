@@ -2452,10 +2452,10 @@ mute-stream@0.0.7:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
   integrity sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s=
 
-nanoreset@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/nanoreset/-/nanoreset-3.0.2.tgz#a455903764c9221c213585cfd23300a419324c15"
-  integrity sha512-YC07n3fHs2k62rJpBeOqWJn2a68wRYRwE6hy0VWM1PYj/cyE7AuGAbqvpm4vUR/lbJ2X/tWe1U7z7Nkk0Yojwg==
+nanoreset@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/nanoreset/-/nanoreset-4.0.0.tgz#cd7ae036f33132fcc1bfd8e1520f8ac7664bc613"
+  integrity sha512-4Ol+8EXlQkrU05Bq8TrAPgTq05UgGxOzSXMIEbQn2fWhv7YhiiN6S2oreFQ99KPHxC1+V8Tak+NitNmnL8Bw2Q==
 
 natural-compare@^1.4.0:
   version "1.4.0"
