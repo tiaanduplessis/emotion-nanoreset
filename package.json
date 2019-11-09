@@ -30,7 +30,7 @@
     "emotion"
   ],
   "devDependencies": {
-    "@emotion/core": "10.0.21",
+    "@emotion/core": "10.0.22",
     "babel-eslint": "10.0.3",
     "eslint": "6.6.0",
     "eslint-config-nitpicky": "4.0.0",
