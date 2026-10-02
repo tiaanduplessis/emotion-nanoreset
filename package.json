@@ -11,11 +11,14 @@
   ],
   "scripts": {
     "build": "node inject.js && npm run build:main",
-    "build:main": "microbundle -o dist/ --sourcemap false --compress false --jsx React.createElement --format cjs",
-    "dev": "microbundle watch -o dist/ --sourcemap false --compress false --jsx React.createElement --format cjs",
+    "build:main": "node scripts/build.mjs",
+    "dev": "node inject.js && node scripts/build.mjs --watch",
     "prebuild": "npm run lint",
     "preversion": "npm run build",
-    "lint": "eslint -c .eslintrc.json src"
+    "lint": "eslint src inject.js scripts test eslint.config.mjs",
+    "test": "node --test test/*.test.cjs",
+    "test:dist": "node scripts/test-dist.cjs",
+    "check": "npm run lint && npm run build && npm test && npm run test:dist"
   },
   "homepage": "https://github.com/tiaanduplessis/emotion-nanoreset#readme",
   "repository": {
@@ -30,20 +33,19 @@
     "emotion"
   ],
   "devDependencies": {
-    "@emotion/core": "10.0.22",
-    "babel-eslint": "10.0.3",
-    "eslint": "6.6.0",
-    "eslint-config-nitpicky": "4.0.0",
-    "eslint-config-prettier": "6.5.0",
-    "eslint-plugin-import": "2.18.2",
-    "eslint-plugin-jsx-a11y": "6.2.3",
-    "eslint-plugin-promise": "4.2.1",
-    "eslint-plugin-react": "7.16.0",
-    "eslint-plugin-react-hooks": "2.2.0",
-    "microbundle": "0.12.0-next.6",
+    "@babel/core": "7.29.7",
+    "@babel/preset-env": "7.29.7",
+    "@eslint/js": "10.0.1",
+    "@rollup/plugin-babel": "7.1.0",
+    "@stylistic/eslint-plugin": "5.10.0",
+    "eslint": "10.11.0",
+    "rollup": "4.63.5",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
     "nanoreset": "4.0.0",
-    "prettier": "1.19.1",
-    "react": "16.11.0"
+    "@emotion/core": "10.3.1",
+    "acorn": "8.17.0",
+    "@babel/plugin-transform-react-jsx": "7.29.7"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -51,5 +53,6 @@
   "peerDependencies": {
     "@emotion/core": "^10",
     "react": "^16"
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }
